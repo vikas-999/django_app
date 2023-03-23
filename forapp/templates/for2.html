@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5px" bgcolor="yellow" background="" align="center" cellspacing="30px" cellpading="30px">
+        <tr>
+            <th>NAME</th>
+            <th>MOBILE</th>
+            <th>EMAIL</th>
+
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.mob}}</td>
+            <td>{{i.gmail}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

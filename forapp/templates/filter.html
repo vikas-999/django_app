@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <h1>{{data | upper}}</h1>
+    <h1>{{d1 | lower}}</h1>
+    <h1>{{data | length}}</h1>
+    <h1>{{d1 | title}}</h1>
+    <h1>{{data | capfirst}}</h1>
+    <h1>indexing :- {{d2.4}}</h1>
+    <h1>for randomly picking :- {{d2 | random}}</h1>
+    <h1>{{d2 | first}}</h1>
+    <h1>{{d2 | last}}</h1>
+    <h1>concat two variables : - {{data | add:" " | add:d1 | lower}}</h1>
+    <h1>concat two variables : - {{data | add:" @ " | add:d1 | lower}}</h1>
+    <h1>cuting varaibale :- {{data | cut:'y'}}</h1>
+    <h1>total words in string : - {{data | wordcount}}</h1>
+    <h1>join function filter : - {{l | join:" + "}}</h1>
+    <h1>default value : {{data2 | default:"it is default value"}}</h1>
+    <h1>default value : {{data3 | default:"it is default value"}}</h1>
+    <h1>divisible by : {{26 | divisibleby:2}}</h1>
+    <h1>divisible by : {{27 | divisibleby:2}}</h1>
+    <h1>slicing : - {{data | slice:'0:7:1'}}</h1>
+
+    {% for i in l3 %}
+    {% if i|divisibleby:2 %}
+        <h1>{{i}} is even</h1>
+    {% else %}
+        <h1>{{i}} is odd</h1>
+    {% endif %}
+    {% endfor %}
+    
+</body>
+</html>
